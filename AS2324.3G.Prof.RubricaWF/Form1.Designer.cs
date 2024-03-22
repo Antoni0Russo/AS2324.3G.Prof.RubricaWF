@@ -194,6 +194,7 @@
             lblNRecord.Size = new Size(125, 20);
             lblNRecord.TabIndex = 0;
             lblNRecord.Text = "N. record inseriti :";
+            lblNRecord.Click += lblNRecord_Click;
             // 
             // groupBox2
             // 
@@ -229,6 +230,7 @@
             lstElenco.Name = "lstElenco";
             lstElenco.Size = new Size(730, 164);
             lstElenco.TabIndex = 3;
+            lstElenco.SelectedIndexChanged += lstElenco_SelectedIndexChanged;
             // 
             // cmbOpzioni
             // 
@@ -243,10 +245,11 @@
             // 
             cmbRicerca.FormattingEnabled = true;
             cmbRicerca.Items.AddRange(new object[] { "Nome", "Cognome", "NickName" });
-            cmbRicerca.Location = new Point(97, 30);
+            cmbRicerca.Location = new Point(97, 29);
             cmbRicerca.Name = "cmbRicerca";
             cmbRicerca.Size = new Size(117, 28);
             cmbRicerca.TabIndex = 2;
+            cmbRicerca.SelectedIndexChanged += cmbRicerca_SelectedIndexChanged;
             // 
             // btnElenca
             // 
@@ -256,6 +259,7 @@
             btnElenca.TabIndex = 2;
             btnElenca.Text = "Elenca";
             btnElenca.UseVisualStyleBackColor = true;
+            btnElenca.Click += btnElenca_Click;
             // 
             // label7
             // 

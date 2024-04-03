@@ -27,40 +27,48 @@ namespace AS2324._3G.Prof.RubricaWF
             string ricerca = cmbRicerca.Text;
             switch (ricerca)
             {
-              
-                    
+                case "Cognome":
+                    if (txtCognome.Text == ricerca)
+                    {
+                        lstElenco.Items.Clear();
+
+                        for (int i = 0; i < cont; i++)
+                        {
+                            string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
+                            lstElenco.Items.Add(elenca);
+                        }
+                    }
+                    break;
+                case "Nome":
+                    if (txtNome.Text == ricerca)
+                    {
+                        lstElenco.Items.Clear();
+
+                        for (int i = 0; i < cont; i++)
+                        {
+                            string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
+                            lstElenco.Items.Add(elenca);
+                        }
+                    }
+                    break;
+                case "Nickname":
+                    if (txtNickName.Text == ricerca)
+                    {
+                        lstElenco.Items.Clear();
+
+                        for (int i = 0; i < cont; i++)
+                        {
+                            string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
+                            lstElenco.Items.Add(elenca);
+                        }
+                    }
+                    break;
+
             }
             
-            if (txtCognome.Text == ricerca)
-           {
-                lstElenco.Items.Clear();
-
-                for (int i = 0; i < cont; i++)
-                {
-                    string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
-                    lstElenco.Items.Add(elenca);
-                }
-           }
-            if (txtNome.Text == ricerca)
-            {
-                lstElenco.Items.Clear();
-
-                for (int i = 0; i < cont; i++)
-                {
-                    string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
-                    lstElenco.Items.Add(elenca);
-                }
-            }
-            if (txtAnnoNascita.Text == ricerca)
-            {
-                lstElenco.Items.Clear();
-
-                for (int i = 0; i < cont; i++)
-                {
-                    string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
-                    lstElenco.Items.Add(elenca);
-                }
-            }
+           
+            
+            
         }
 
         private void btnAggiungi_Click(object sender, EventArgs e)
@@ -103,6 +111,7 @@ namespace AS2324._3G.Prof.RubricaWF
                 string elenca = $"-{i + 1} -Nicname:{nickname[i]} -Nome:{nome[i]}  -Cognome:{cognome[i]} -Simpatia:{simpatia[i]} -annoDiNacita:{annoNascita[i]} -email:{email[i]}";
                 lstElenco.Items.Add(elenca);
             }
+            
         }
     }
 }
